@@ -1,4 +1,3 @@
-
 export interface ConversationSummary {
   rundown: string;
   artifacts: string;
@@ -37,6 +36,10 @@ export interface RawIdea {
   summary: string;
   tags: string[];
   confidence: number;
+  reach: number;
+  urgency: number;
+  marketSize: number;
+  effort: number;
 }
 
 export interface RawTask {

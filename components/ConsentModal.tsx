@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 interface ConsentModalProps {
@@ -12,6 +11,16 @@ const ConsentModal: React.FC<ConsentModalProps> = ({ onAccept }) => {
         <h2 className="text-2xl font-bold mb-4">Consent for Data Processing</h2>
         <p className="text-brand-text-muted mb-6">
           By uploading your conversation transcript ("Memory"), you consent to its processing by a large language model (LLM) to summarize, extract ideas, and generate tasks. Your data is processed for this purpose only and is not stored or used for training. Please ensure no sensitive personal information is included in your upload.
+        </p>
+        <p className="text-xs text-brand-text-muted mb-6">
+          By continuing, you agree to our{' '}
+          <a href="#" className="underline text-brand-primary/80 hover:text-brand-primary transition-colors">
+            Terms of Service
+          </a>{' '}
+          and{' '}
+          <a href="#" className="underline text-brand-primary/80 hover:text-brand-primary transition-colors">
+            Privacy Policy
+          </a>.
         </p>
         <button
           onClick={onAccept}

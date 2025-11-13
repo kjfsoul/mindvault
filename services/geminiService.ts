@@ -1,4 +1,3 @@
-
 import { GoogleGenAI, Type } from '@google/genai';
 import { ConversationSummary, RawIdea, RawTask } from '../types';
 
@@ -48,8 +47,24 @@ const ideaExtractorSchema = {
         type: Type.INTEGER,
         description: "An initial confidence score from 1 to 100 on the idea's viability.",
       },
+      reach: {
+        type: Type.INTEGER,
+        description: "Estimate the potential reach or revenue impact on a scale of 1-100.",
+      },
+      urgency: {
+        type: Type.INTEGER,
+        description: "Estimate the market urgency or need for this idea on a scale of 1-100.",
+      },
+      marketSize: {
+        type: Type.INTEGER,
+        description: "Estimate the target market size on a scale of 1-100.",
+      },
+      effort: {
+        type: Type.INTEGER,
+        description: "Estimate the implementation effort required on a scale of 1-100 (1=low, 100=high).",
+      },
     },
-    required: ['title', 'summary', 'tags', 'confidence'],
+    required: ['title', 'summary', 'tags', 'confidence', 'reach', 'urgency', 'marketSize', 'effort'],
   },
 };
 
@@ -92,7 +107,13 @@ export const summarizeConversation = async (text: string): Promise<ConversationS
 };
 
 export const extractIdeas = async (summary: ConversationSummary): Promise<RawIdea[]> => {
-  const prompt = `From the provided conversation summary (especially the 'Artifacts' section), extract up to 5 discrete business ideas. For each idea, provide a concise title, a one-sentence summary, relevant tags, and an initial confidence score from 1 to 100 on its viability.\n\nSUMMARY:\n${JSON.stringify(summary, null, 2)}`;
+  const prompt = `From the provided conversation summary (especially the 'Artifacts' section), extract up to 5 discrete business ideas. For each idea, provide a concise title, a one-sentence summary, relevant tags, and an initial confidence score (1-100). Also, provide initial estimates for the following metrics on a scale of 1-100:
+- Reach: Potential revenue or customer impact.
+- Urgency: How pressing the need is for the market.
+- Market Size: The size of the potential market.
+- Effort: The estimated difficulty and time to implement (1 is very low effort, 100 is very high effort).
+
+Base your estimates on any clues in the text, such as revenue targets, setup times, or described user problems.\n\nSUMMARY:\n${JSON.stringify(summary, null, 2)}`;
 
   const response = await ai.models.generateContent({
     model: 'gemini-2.5-flash',
