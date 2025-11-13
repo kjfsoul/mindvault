@@ -1,0 +1,5 @@
+{
+  "name": "MindVault Core Build",
+  "description": "An application to automatically track, process, and score business ideas from conversation transcripts using AI. Users can upload conversations, see summaries, extracted ideas, and actionable tasks.",
+  "requestFramePermissions": []
+}
