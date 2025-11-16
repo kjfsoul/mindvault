@@ -17,7 +17,16 @@
               'brand-secondary': '#10B981',
               'brand-text': '#E5E7EB',
               'brand-text-muted': '#9CA3AF',
-            }
+            },
+            keyframes: {
+              'fade-in-up': {
+                  '0%': { opacity: '0', transform: 'translateY(10px)' },
+                  '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+            },
+            animation: {
+              'fade-in-up': 'fade-in-up 0.5s ease-out forwards',
+            },
           }
         }
       }
@@ -26,19 +35,23 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     <script src="https://unpkg.com/docx@8.5.0/build/index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.6.0/mammoth.browser.min.js"></script>
   <script type="importmap">
 {
   "imports": {
     "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
     "react/": "https://aistudiocdn.com/react@^19.2.0/",
     "react": "https://aistudiocdn.com/react@^19.2.0",
-    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.29.1"
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.29.1",
+    "next/": "https://aistudiocdn.com/next@^16.0.3/",
+    "@supabase/ssr": "https://aistudiocdn.com/@supabase/ssr@^0.7.0",
+    "@supabase/supabase-js": "https://aistudiocdn.com/@supabase/supabase-js@^2.81.1"
   }
 }
 </script>
 </head>
   <body class="bg-brand-bg text-brand-text">
     <div id="root"></div>
-    <script type="module" src="/index.tsx"></script>
+    <script type="module" src="./index.tsx"></script>
   </body>
 </html>
