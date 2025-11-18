@@ -1,0 +1,32 @@
+Based on your request, I have conducted a web search and analyzed the provided code snippets. Before devising a detailed plan, it's important to clarify the context, as there appear to be a few a misunderstandings about my capabilities and the nature of the "MCP server."
+
+First, I do not have pre-existing tool access to "MCP servers." The code snippets you provided, particularly `mcp_tab`, describe a user interface for generating configuration settings to allow various IDEs (like Cursor) to connect to a local application named "Archon." This Archon application seems to *provide* the MCP service. My role is to help you set up and configure this service, not to connect to it as a client myself.
+
+With that clarification, here is my analysis and proposed plan.
+
+### **1. Research and Analysis**
+
+*   **MCP Servers:** My search, combined with the context from your code, indicates that "MCP Server" refers to a component of your local **"Archon"** project. This is a service you can run on your machine that IDEs can then connect to for specific functionalities. The goal is to run this Archon MCP server persistently on your Macbook and configure your IDEs to communicate with it.
+*   **Google's Agent Development Kit:** My search indicates this isn't a single, official product. It likely refers to the ecosystem of tools used to build AI agents with Google's models. This typically includes:
+    1.  The **Gemini API** for model access.
+    2.  Client libraries (e.g., `langchain-google-genai` for Python).
+    3.  Agent frameworks like **LangChain** or **LlamaIndex**.
+
+### **2. Proposed Integration Plan**
+
+Here is a high-level plan to achieve your goal of making the Archon MCP server and an Agent Development Kit globally available for all your projects in Cursor Pro and for me (the Gemini CLI) to use.
+
+1.  **Run Archon MCP as a Persistent Service:**
+    *   I will analyze the `run_docker.py` script and other project files to determine the best way to run your Archon MCP server as a background service on your Macbook.
+    *   The best practice for this on macOS is to create a `launchd` service. This will ensure the server starts automatically on login and runs persistently in the background.
+
+2.  **Set Up a Global Agent Development Environment:**
+    *   I will set up a centralized location for your AI development tools (e.g., in `~/.config/google-agent-kit/`).
+    *   This includes installing Python libraries like `langchain`, `langchain-google-genai`, and `google-cloud-aiplatform` into a dedicated virtual environment.
+    *   I will configure your shell profile (`~/.zshrc` or `~/.bash_profile`) to make your Gemini API key available as a global environment variable, so you don't have to set it per project.
+
+3.  **Configure IDEs and CLI:**
+    *   **Cursor Pro IDE:** Once the Archon MCP server is running as a service, the configuration for Cursor (as described in your `mcp_tab` code) will work consistently for all projects. The global Python agent environment will also be accessible for any Python project opened in the IDE.
+    *   **Gemini CLI (Me):** I will be able to interact with the Archon server via its API using shell commands (e.g., `curl`). I can also use the agent development tools by activating the global virtual environment to run Python scripts.
+
+Does this plan and the clarification of the terminology align with your goals? Please confirm, and I can begin executing the first step.

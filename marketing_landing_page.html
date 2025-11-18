@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindVault - Turn Your Chats Into Cashflow</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0D1117;
+            color: #E5E7EB;
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, #38BDF8, #34D399);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero-bg {
+            background-image: radial-gradient(circle at top right, rgba(56, 189, 248, 0.1), transparent 40%),
+                              radial-gradient(circle at bottom left, rgba(52, 211, 153, 0.1), transparent 40%);
+        }
+        .cta-button {
+            transition: all 0.3s ease;
+        }
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(52, 211, 153, 0.2);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="absolute top-0 left-0 right-0 z-10 py-4 px-8">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="text-2xl font-bold">
+                <span class="gradient-text">MindVault</span>
+            </div>
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="#features" class="hover:text-teal-400 transition">Features</a>
+                <a href="#pricing" class="hover:text-teal-400 transition">Pricing</a>
+                <a href="#faq" class="hover:text-teal-400 transition">FAQ</a>
+            </nav>
+            <a href="#" class="hidden md:inline-block bg-teal-500 text-white font-semibold py-2 px-5 rounded-lg hover:bg-teal-600 transition">
+                Sign Up
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <main class="hero-bg">
+        <section class="container mx-auto text-center py-32 px-4">
+            <h1 class="text-5xl md:text-7xl font-black max-w-4xl mx-auto leading-tight">
+                Stop Losing <span class="gradient-text">Million-Dollar Ideas</span> in Your Chat History
+            </h1>
+            <p class="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto mt-6">
+                MindVault ingests your entire conversation history, finds the hidden gems, and tells you exactly what to build next for maximum revenue.
+            </p>
+            <div class="mt-10">
+                <a href="#" class="cta-button bg-teal-500 text-white font-bold py-4 px-8 rounded-lg text-lg shadow-lg hover:bg-teal-600">
+                    Bring Your Memory to Life &rarr;
+                </a>
+                <p class="text-gray-500 mt-4 text-sm">Free to start. No credit card required.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- How It Works -->
+    <section id="how-it-works" class="py-20 bg-black bg-opacity-20">
+        <div class="container mx-auto text-center px-4">
+            <h2 class="text-4xl font-bold mb-2">Turn Chaos Into Clarity. In 3 Steps.</h2>
+            <p class="text-gray-400 mb-12">From scattered thoughts to a prioritized action plan.</p>
+            <div class="grid md:grid-cols-3 gap-12">
+                <!-- Step 1 -->
+                <div class="border border-gray-800 p-8 rounded-xl bg-gray-900 bg-opacity-50">
+                    <div class="text-5xl mb-4">🧠</div>
+                    <h3 class="text-2xl font-bold mb-2">1. Upload Your Brain</h3>
+                    <p class="text-gray-400">Drag and drop your entire chat history (TXT, ZIP, XLSX). MindVault ingests everything securely.</p>
+                </div>
+                <!-- Step 2 -->
+                <div class="border border-gray-800 p-8 rounded-xl bg-gray-900 bg-opacity-50">
+                    <div class="text-5xl mb-4">📈</div>
+                    <h3 class="text-2xl font-bold mb-2">2. Get The Score</h3>
+                    <p class="text-gray-400">Our proprietary Opportunity Score (R.U.M.E.) analyzes every idea for revenue, urgency, moat, and effort.</p>
+                </div>
+                <!-- Step 3 -->
+                <div class="border border-gray-800 p-8 rounded-xl bg-gray-900 bg-opacity-50">
+                    <div class="text-5xl mb-4">🚀</div>
+                    <h3 class="text-2xl font-bold mb-2">3. Execute Your Plan</h3>
+                    <p class="text-gray-400">Get a prioritized list of your best ideas and an actionable task list. Or let AppSmithGPT build the code for you.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="py-20">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold">A Decision Engine for Founders</h2>
+                <p class="text-gray-400 max-w-2xl mx-auto mt-2">MindVault is more than a notebook. It's an active partner in your success.</p>
+            </div>
+            <!-- Feature 1: Opportunity Score -->
+            <div class="flex flex-col md:flex-row items-center gap-12 mb-16">
+                <div class="md:w-1/2">
+                    <h3 class="text-3xl font-bold mb-4 gradient-text">The Opportunity Score</h3>
+                    <p class="text-gray-300 mb-4">Stop guessing. Our unique R.U.M.E. algorithm (0.4R + 0.3U + 0.2M + 0.1E) objectively ranks every idea based on its potential for rapid revenue and market viability. Know instantly which ideas are worth your time.</p>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>✅ **Prioritize by Profit:** Automatically surfaces high Day 1 Revenue ideas.</li>
+                        <li>✅ **Market Urgency:** Uses real-time data to weigh market trends.</li>
+                        <li>✅ **Know Your Moat:** Assesses defensibility and scalability.</li>
+                    </ul>
+                </div>
+                <div class="md:w-1/2">
+                    <div class="bg-gray-800 p-6 rounded-lg border border-gray-700">
+                        <!-- Placeholder for an image of the Opportunity Score UI -->
+                        <p class="text-center text-gray-500">[Image: A sleek UI dial showing an "Opportunity Score" of 92.5, with smaller dials for R, U, M, and E.]</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Feature 2: Action Plan -->
+            <div class="flex flex-col md:flex-row-reverse items-center gap-12">
+                <div class="md:w-1/2">
+                    <h3 class="text-3xl font-bold mb-4 gradient-text">The Action Plan</h3>
+                    <p class="text-gray-300 mb-4">An idea is useless without execution. MindVault's "Taskifier" agent automatically generates a step-by-step action plan for your top ideas. Manage your entire workflow from a single, interactive dashboard.</p>
+                     <ul class="space-y-2 text-gray-400">
+                        <li>✅ **Interactive Tasks:** Drag-and-drop, edit, and mark tasks as complete.</li>
+                        <li>✅ **AI-Generated Steps:** Get a head start with an AI-generated project plan.</li>
+                        <li>✅ **Stay Organized:** Group tasks by idea and track your progress.</li>
+                    </ul>
+                </div>
+                <div class="md:w-1/2">
+                    <div class="bg-gray-800 p-6 rounded-lg border border-gray-700">
+                         <!-- Placeholder for an image of the Action Plan UI -->
+                        <p class="text-center text-gray-500">[Image: A clean task list UI showing tasks grouped by idea, with checkboxes and priority labels.]</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section id="pricing" class="py-20 bg-black bg-opacity-20">
+        <div class="container mx-auto text-center px-4">
+            <h2 class="text-4xl font-bold">Find the Perfect Plan</h2>
+            <p class="text-gray-400 max-w-xl mx-auto mt-2 mb-12">Start for free, then scale as your empire grows. Your first million-dollar idea is waiting.</p>
+            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <!-- Free Tier -->
+                <div class="border border-gray-700 p-8 rounded-xl">
+                    <h3 class="text-2xl font-bold">Free</h3>
+                    <p class="text-5xl font-black my-4">$0</p>
+                    <p class="text-gray-400 mb-6">For casual users & AI-phobists.</p>
+                    <ul class="text-left space-y-3 text-gray-300">
+                        <li>✓ Up to 3 file uploads</li>
+                        <li>✓ Basic Idea Extraction</li>
+                        <li>✓ Local-only processing</li>
+                    </ul>
+                    <a href="#" class="mt-8 block w-full bg-gray-600 text-white font-semibold py-3 rounded-lg hover:bg-gray-500 transition">Get Started</a>
+                </div>
+                <!-- Pro Tier -->
+                <div class="border-2 border-teal-500 p-8 rounded-xl relative">
+                    <span class="absolute top-0 -translate-y-1/2 bg-teal-500 text-white text-sm font-bold px-3 py-1 rounded-full">MOST POPULAR</span>
+                    <h3 class="text-2xl font-bold">Pro</h3>
+                    <p class="text-5xl font-black my-4">$29<span class="text-lg font-semibold text-gray-400">/mo</span></p>
+                    <p class="text-gray-400 mb-6">For serious founders & indie hackers.</p>
+                    <ul class="text-left space-y-3 text-gray-300">
+                        <li>✓ Unlimited file uploads</li>
+                        <li>✓ **Opportunity Score (R.U.M.E.)**</li>
+                        <li>✓ Interactive Action Plan</li>
+                        <li>✓ Persistent cloud storage</li>
+                        <li>✓ AI Studio Access</li>
+                    </ul>
+                    <a href="#" class="mt-8 block w-full bg-teal-500 text-white font-semibold py-3 rounded-lg hover:bg-teal-600 transition">Start My 7-Day Trial</a>
+                </div>
+                <!-- Founder Tier -->
+                <div class="border border-gray-700 p-8 rounded-xl">
+                    <h3 class="text-2xl font-bold">Founder</h3>
+                    <p class="text-5xl font-black my-4">$99<span class="text-lg font-semibold text-gray-400">/mo</span></p>
+                    <p class="text-gray-400 mb-6">For teams & high-velocity builders.</p>
+                    <ul class="text-left space-y-3 text-gray-300">
+                        <li>✓ Everything in Pro</li>
+                        <li>✓ **AppSmithGPT Scaffolding**</li>
+                        <li>✓ Team collaboration features</li>
+                        <li>✓ Priority support</li>
+                    </ul>
+                    <a href="#" class="mt-8 block w-full bg-gray-600 text-white font-semibold py-3 rounded-lg hover:bg-gray-500 transition">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="py-20">
+        <div class="container mx-auto max-w-3xl px-4">
+            <h2 class="text-4xl font-bold text-center mb-12">Frequently Asked Questions</h2>
+            <div class="space-y-4">
+                <details class="bg-gray-900 bg-opacity-50 border border-gray-800 rounded-lg p-4 cursor-pointer">
+                    <summary class="font-semibold text-lg">Is my data secure?</summary>
+                    <p class="text-gray-400 mt-2">Absolutely. Security is our top priority. Your data is stored in a private, encrypted Supabase instance with Row-Level Security, meaning only you can access your data. We also offer a local-only processing option for maximum privacy.</p>
+                </details>
+                <details class="bg-gray-900 bg-opacity-50 border border-gray-800 rounded-lg p-4 cursor-pointer">
+                    <summary class="font-semibold text-lg">Can I delete my data?</summary>
+                    <p class="text-gray-400 mt-2">Yes. You have complete control. You can delete individual sessions or your entire account and all associated data with a single click from your account settings.</p>
+                </details>
+                 <details class="bg-gray-900 bg-opacity-50 border border-gray-800 rounded-lg p-4 cursor-pointer">
+                    <summary class="font-semibold text-lg">What file formats are supported?</summary>
+                    <p class="text-gray-400 mt-2">MindVault currently supports `.txt`, `.md`, `.xlsx`, and `.zip` files (for ChatGPT exports). You can also paste text directly. We are continuously expanding our parsing capabilities.</p>
+                </details>
+                 <details class="bg-gray-900 bg-opacity-50 border border-gray-800 rounded-lg p-4 cursor-pointer">
+                    <summary class="font-semibold text-lg">What is the Opportunity Score?</summary>
+                    <p class="text-gray-400 mt-2">It's our proprietary algorithm that analyzes every idea against four key metrics: Revenue Potential (R), Market Urgency (U), Competitive Moat (M), and Ease of Effort (E). It's designed to help you focus on what will make you money the fastest.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-20">
+        <div class="container mx-auto text-center px-4">
+            <h2 class="text-4xl font-bold max-w-2xl mx-auto">Ready to Find Your Next Big Thing?</h2>
+            <p class="text-gray-400 mt-4 mb-8">Your best ideas are already written. It's time to unlock them.</p>
+            <a href="#" class="cta-button bg-teal-500 text-white font-bold py-4 px-8 rounded-lg text-lg shadow-lg hover:bg-teal-600">
+                Start Your Free Trial Today
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-gray-800 py-8">
+        <div class="container mx-auto text-center text-gray-500">
+            <p>&copy; 2025 MindVault. All rights reserved.</p>
+            <div class="mt-4 space-x-6">
+                <a href="#" class="hover:text-teal-400">Privacy Policy</a>
+                <a href="#" class="hover:text-teal-400">Terms of Service</a>
+                <a href="#" class="hover:text-teal-400">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
